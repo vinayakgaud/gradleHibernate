@@ -9,15 +9,23 @@
 	
 <hibernate-configuration>
 	<session-factory>
+		<!-- setting up connection to database -->
 		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/gradlehibernate</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
-		<!-- changing dialect of hibernate to match with mysql -->
-		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-		<!-- to auto create the table, create - will create new table always, update - will create table if not present else update -->
-		<property name="hbm2ddl.auto">update</property>
-		<!-- if we want hibernate to show sql queries also then and we can also use format property if we want it formatted -->
+		<!-- changing dialect of hibernate to match with mysql because using MySQL v5+-->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<!-- to auto create the table, create - will create new table always, 
+		update - will create table if not present else update -->
+		<property name="hbm2ddl.auto"><!-- create - drops the table if exist -->update</property>
+		<!-- if we want hibernate to show sql queries also  
+		and we can also use format property if we want it formatted -->
 		<property name="show_sql">true</property>
+		<!-- to map the class to let hibernate know that we have entity class we want to work with
+			as many mapping tag will be there as many entity classes we want to work with, with fully qualified name
+			with packages and all
+		 -->
+		<mapping class="gradlehibernate.CreateUserDataTable" />
 	</session-factory>
 </hibernate-configuration>
