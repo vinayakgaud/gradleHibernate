@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- configuration file for hibernate we can give this file any name but it is standard to name it like this -->
+
+<!-- hibernate dtd  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/gradlehibernate</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<!-- changing dialect of hibernate to match with mysql -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- to auto create the table, create - will create new table always, update - will create table if not present else update -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- if we want hibernate to show sql queries also then and we can also use format property if we want it formatted -->
+		<property name="show_sql">true</property>
+	</session-factory>
+</hibernate-configuration>
