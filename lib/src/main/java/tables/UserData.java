@@ -1,4 +1,4 @@
-package gradlehibernate;
+package tables;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,7 +10,7 @@ if we don't mention name in entity it will use default class name eg. 'CreateUse
 
 @Table(name = "userdata") /**annotation to set the table name in database */
 
-public class CreateUserDataTable {
+public class UserData {
 	@Id /**to set any column as primary key */
 	private int userID;
 	private String userName;
@@ -18,11 +18,11 @@ public class CreateUserDataTable {
 	private String userEmail;
 	private String userPassword;
 	
-	public CreateUserDataTable() {
+	public UserData() {
 		super();
 	}
 	
-	public CreateUserDataTable(int id, String name, String gender, String email,String password) {
+	public UserData(int id, String name, String gender, String email,String password) {
 		this.userID = id;
 		this.userName = name;
 		this.userGender = gender;

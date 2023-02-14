@@ -26,6 +26,7 @@
 			as many mapping tag will be there as many entity classes we want to work with, with fully qualified name
 			with packages and all
 		 -->
-		<mapping class="gradlehibernate.CreateUserDataTable" />
+		<mapping class="tables.UserData" />
+		<mapping class="tables.UserAddress" />
 	</session-factory>
 </hibernate-configuration>
