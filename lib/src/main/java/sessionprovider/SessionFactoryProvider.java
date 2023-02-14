@@ -1,4 +1,4 @@
-package gradlehibernate;
+package sessionprovider;
 
 import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
