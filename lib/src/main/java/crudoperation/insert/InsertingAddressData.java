@@ -46,6 +46,8 @@ public class InsertingAddressData {
 		session.persist(firstAddress);		
 		transaction.commit();
 		session.close();
+		
+		sessionFactory.close();
 	}
 
 }
