@@ -52,7 +52,7 @@ public class InsertingUserData {
 		/**closing the session*/
 		session.close();
 		
-		
+		sessionFactory.close();
 		
 	}
 

@@ -16,7 +16,7 @@ public class FetchingAddressData {
 		SessionFactory sessionfactory = SessionFactoryProvider.getSessionFactory();
 		Session session = sessionfactory.openSession();
 		
-		UserAddress userAddress = (UserAddress) session.get(UserAddress.class, 1);
+		UserAddress userAddress = (UserAddress) session.get(UserAddress.class, 2);
 		/**UserAddress userAddress = (UserAddress) session.load(UserAddress.class, 1);
 		we can use loan also but it is deprecated */
 		System.out.println("Fetched data");

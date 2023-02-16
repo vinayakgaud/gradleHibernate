@@ -32,12 +32,12 @@ public class UserAddress {
 	@Column(name = "is_open")
 	private boolean isOpen;
 	
-	/**Transient mean column for this instance vairable will not be created in DB*/
+	/**Transient mean column for this instance variable will not be created in DB*/
 	@Transient
 	private double x;
 	
 	@Column(name = "address_date")
-	/**to format the date type, as in which formate date will be stored in DB, Date only will take date no time stamp*/
+	/**to format the date type, as in which format date will be stored in DB, Date only will take date no time stamp*/
 	@Temporal(TemporalType.DATE)
 	private Date addedDate;
 
