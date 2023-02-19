@@ -28,5 +28,6 @@
 		 -->
 		<mapping class="tables.UserData" />
 		<mapping class="tables.UserAddress" />
+		<mapping class="tables.Student" />
 	</session-factory>
 </hibernate-configuration>
