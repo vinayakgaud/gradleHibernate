@@ -29,5 +29,7 @@
 		<mapping class="tables.UserData" />
 		<mapping class="tables.UserAddress" />
 		<mapping class="tables.Student" />
+		<mapping class="tables.onetoonemapping.StudentMap" />
+		<mapping class="tables.onetoonemapping.StudentDetailMap" />
 	</session-factory>
 </hibernate-configuration>
