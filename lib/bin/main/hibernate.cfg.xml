@@ -33,5 +33,7 @@
 		<mapping class="tables.onetoonemapping.StudentDetailMap" />
 		<mapping class="tables.onetomany.StudData" />
 		<mapping class="tables.onetomany.StudExtend" />
+		<mapping class="tables.manytoone.FirstData" />
+		<mapping class="tables.manytoone.SecondData" />
 	</session-factory>
 </hibernate-configuration>
