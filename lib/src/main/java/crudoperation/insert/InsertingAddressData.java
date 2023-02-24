@@ -33,14 +33,14 @@ public class InsertingAddressData {
 		fileChooser.showOpenDialog(null);
 		File file = fileChooser.getSelectedFile();
 		
-		FileInputStream fis = new FileInputStream(file);
-		/**creating the new image data array*/
-		byte[] data = new byte[fis.available()];
-		/**storing value of image in byte*/
-		fis.read(data);
-		/**storing byte[] in DB as image*/
-		firstAddress.setPicture(data);
-		
+		try (FileInputStream fis = new FileInputStream(file)) {
+			/**creating the new image data array*/
+			byte[] data = new byte[fis.available()];
+			/**storing value of image in byte*/
+			fis.read(data);
+			/**storing byte[] in DB as image*/
+			firstAddress.setPicture(data);
+		}
 		Session session = sessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();		
 		session.persist(firstAddress);		
