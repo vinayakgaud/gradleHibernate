@@ -31,5 +31,7 @@
 		<mapping class="tables.Student" />
 		<mapping class="tables.onetoonemapping.StudentMap" />
 		<mapping class="tables.onetoonemapping.StudentDetailMap" />
+		<mapping class="tables.onetomany.StudData" />
+		<mapping class="tables.onetomany.StudExtend" />
 	</session-factory>
 </hibernate-configuration>

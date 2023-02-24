@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 //class which is being mapped
@@ -18,6 +20,9 @@ public class StudentDetailMap {
 	@Column(name = "stud_course")
 	private String course;
 	
+	//it will not create separate column for this entity
+	@OneToOne(mappedBy = "studentDetailMap")
+	private StudentMap studentMap;
 	public StudentDetailMap() {
 		super();
 		// TODO Auto-generated constructor stub
