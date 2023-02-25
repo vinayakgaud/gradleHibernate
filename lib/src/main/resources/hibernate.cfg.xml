@@ -35,5 +35,7 @@
 		<mapping class="tables.onetomany.StudExtend" />
 		<mapping class="tables.manytoone.FirstData" />
 		<mapping class="tables.manytoone.SecondData" />
+		<mapping class="tables.manytomany.Employee" />
+		<mapping class="tables.manytomany.Employer" />
 	</session-factory>
 </hibernate-configuration>
