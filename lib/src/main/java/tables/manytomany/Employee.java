@@ -2,6 +2,7 @@ package tables.manytomany;
 
 import java.util.List;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
@@ -14,7 +15,12 @@ public class Employee {
 	private String empName;
 	//it will create separate table for managing mapping, we can prevent it by using mappedBy so 
 	//mapping is managed by other entity and new table is not created for current entity
-	@ManyToMany
+	//there are two fetching type lazy and eager
+	//lazy is by default
+	//we can set it using fetch attribute in mapping anootation
+	//lazy mean it will not call foreign key values until or unless getters or size is used
+	//eager mean it will call everything including foreign key values without calling getters or size
+	@ManyToMany(fetch = FetchType.EAGER)
 	//we can also set the name for new table created using join table
 	//then can name each column inside it, first column is join column
 	//second is inverse join column, we can do it this way

@@ -22,6 +22,8 @@
 		<!-- if we want hibernate to show sql queries also  
 		and we can also use format property if we want it formatted -->
 		<property name="show_sql">true</property>
+		<!-- formatting sql query -->
+		<property name="format_sql">true</property>
 		<!-- to map the class to let hibernate know that we have entity class we want to work with
 			as many mapping tag will be there as many entity classes we want to work with, with fully qualified name
 			with packages and all
